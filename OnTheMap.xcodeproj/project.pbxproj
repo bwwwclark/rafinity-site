@@ -21,6 +21,7 @@
 		681EF9381C70FCA600FB3553 /* Udacity Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681EF9371C70FCA600FB3553 /* Udacity Client.swift */; };
 		681EF93A1C70FD5000FB3553 /* Map View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681EF9391C70FD5000FB3553 /* Map View Controller.swift */; };
 		681EF93C1C71275600FB3553 /* Login View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681EF93B1C71275600FB3553 /* Login View Controller.swift */; };
+		681EF93E1C723E3B00FB3553 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681EF93D1C723E3B00FB3553 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		681EF9371C70FCA600FB3553 /* Udacity Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Udacity Client.swift"; sourceTree = "<group>"; };
 		681EF9391C70FD5000FB3553 /* Map View Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Map View Controller.swift"; sourceTree = "<group>"; };
 		681EF93B1C71275600FB3553 /* Login View Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Login View Controller.swift"; sourceTree = "<group>"; };
+		681EF93D1C723E3B00FB3553 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,13 +115,9 @@
 			children = (
 				681EF8FE1C70F23900FB3553 /* AppDelegate.swift */,
 				681EF9021C70F23900FB3553 /* Main.storyboard */,
-				681EF93B1C71275600FB3553 /* Login View Controller.swift */,
-				681EF92F1C70F25800FB3553 /* Parse Constants.swift */,
-				681EF9311C70F8EF00FB3553 /* Udacity Constants.swift */,
-				681EF9331C70FA1900FB3553 /* StudentLocations.swift */,
-				681EF9351C70FA9900FB3553 /* ParseClient.swift */,
-				681EF9371C70FCA600FB3553 /* Udacity Client.swift */,
-				681EF9391C70FD5000FB3553 /* Map View Controller.swift */,
+				681EF93F1C723F9100FB3553 /* View Contollers */,
+				681EF9401C723FC300FB3553 /* Udacity */,
+				681EF9411C723FFC00FB3553 /* Parse */,
 				681EF9081C70F23900FB3553 /* Assets.xcassets */,
 				681EF90A1C70F23900FB3553 /* LaunchScreen.storyboard */,
 				681EF90D1C70F23900FB3553 /* Info.plist */,
@@ -144,6 +142,35 @@
 				681EF9231C70F23900FB3553 /* Info.plist */,
 			);
 			path = OnTheMapUITests;
+			sourceTree = "<group>";
+		};
+		681EF93F1C723F9100FB3553 /* View Contollers */ = {
+			isa = PBXGroup;
+			children = (
+				681EF93B1C71275600FB3553 /* Login View Controller.swift */,
+				681EF93D1C723E3B00FB3553 /* TableViewController.swift */,
+				681EF9391C70FD5000FB3553 /* Map View Controller.swift */,
+			);
+			name = "View Contollers";
+			sourceTree = "<group>";
+		};
+		681EF9401C723FC300FB3553 /* Udacity */ = {
+			isa = PBXGroup;
+			children = (
+				681EF9311C70F8EF00FB3553 /* Udacity Constants.swift */,
+				681EF9371C70FCA600FB3553 /* Udacity Client.swift */,
+			);
+			name = Udacity;
+			sourceTree = "<group>";
+		};
+		681EF9411C723FFC00FB3553 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				681EF92F1C70F25800FB3553 /* Parse Constants.swift */,
+				681EF9351C70FA9900FB3553 /* ParseClient.swift */,
+				681EF9331C70FA1900FB3553 /* StudentLocations.swift */,
+			);
+			name = Parse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +307,7 @@
 				681EF9321C70F8EF00FB3553 /* Udacity Constants.swift in Sources */,
 				681EF9381C70FCA600FB3553 /* Udacity Client.swift in Sources */,
 				681EF9301C70F25800FB3553 /* Parse Constants.swift in Sources */,
+				681EF93E1C723E3B00FB3553 /* TableViewController.swift in Sources */,
 				681EF9361C70FA9900FB3553 /* ParseClient.swift in Sources */,
 				681EF9341C70FA1900FB3553 /* StudentLocations.swift in Sources */,
 				681EF93A1C70FD5000FB3553 /* Map View Controller.swift in Sources */,

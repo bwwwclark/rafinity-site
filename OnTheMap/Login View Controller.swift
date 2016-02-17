@@ -69,8 +69,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UITableViewDel
     
     func completeLogin(){
         dispatch_async(dispatch_get_main_queue(), {
-            let mapViewController = self.storyboard!.instantiateViewControllerWithIdentifier("MapViewController")
-            self.presentViewController(mapViewController, animated: true, completion: nil)
+            let tabBarController = self.storyboard!.instantiateViewControllerWithIdentifier("TabBarController")
+            self.presentViewController(tabBarController, animated: true, completion: nil)
         })
     }
 }

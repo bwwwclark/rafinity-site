@@ -20,6 +20,8 @@ struct StudentInformation {
     var mediaURL: String? = nil
     var latitude: Double? = nil
     var longitude: Double? = nil
+    var title: String? = "/(firstName) /(lastName)"
+    
     
     //MARK: Initializer
     
