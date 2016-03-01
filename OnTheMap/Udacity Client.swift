@@ -121,31 +121,31 @@ class UdacityClient: AnyObject {
     //
     //
     //    }
-    //
-    //    func logoutWithUdacity(sessionID: String, completionHandler: (success: Bool, error: NSError?) -> Void) {
-    //
-    //        /* Make the Udacity DELETE request */
-    //        taskForUdacityDELETEMethod(OTMClient.Methods.Session) {result, error in
-    //
-    //            if let error = error {
-    //                completionHandler(success: false, error: error)
-    //            } else {
-    //                if let session = result[OTMClient.JSONResponseKeys.Session]??[OTMClient.JSONResponseKeys.sessionID] as? String {
-    //
-    //                    //DELETE method returned a session so set the shared instance sessionID back to nil
-    //                    OTMClient.sharedInstance().sessionID = nil
-    //                    completionHandler(success: true, error: nil)
-    //                    
-    //                } else {
-    //                    completionHandler(success: false, error: nil)
-    //                }
-    //                
-    //            }
-    //        }
-    //    }
-
-
-
+//    
+//        func logoutWithUdacity(sessionID: String, completionHandler: (success: Bool, error: NSError?) -> Void) {
+//    
+//            /* Make the Udacity DELETE request */
+//            taskForUdacityDELETEMethod(UdacityClient.Methods.Session) {result, error in
+//    
+//                if let error = error {
+//                    completionHandler(success: false, error: error)
+//                } else {
+//                    if let session = result[OTMClient.JSONResponseKeys.Session]??[OTMClient.JSONResponseKeys.sessionID] as? String {
+//    
+//                        //DELETE method returned a session so set the shared instance sessionID back to nil
+//                        OTMClient.sharedInstance().sessionID = nil
+//                        completionHandler(success: true, error: nil)
+//                        
+//                    } else {
+//                        completionHandler(success: false, error: nil)
+//                    }
+//                    
+//                }
+//            }
+//        }
+//
+//
+//
 
 
 

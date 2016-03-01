@@ -26,19 +26,33 @@ class MapViewController: UIViewController, MKMapViewDelegate{
         super.viewDidLoad()
         
         
-        ParseClient.sharedInstance().getStudentLocations("100", completionHandler: { locations, error in
+        ParseClient.sharedInstance().getStudentLocations("100", completionHandler: { error in
             
             if let error = error {
                 print("Error retrieving annotations from Parse: \(error)")
-            } else if let locations = locations {
-                for location in locations {
-                    self.annotation = ParseClient.sharedInstance().createAnnotationFromStudentInformation(location)
-                    self.annotations.append(self.annotation)
-                    print(self.annotation.title)
-                    print(self.annotation.subtitle)
-                    self.MapView.addAnnotations(self.annotations)
-                    print("added to map")
+                
+            } else if !StudentInformationClient.sharedInstance().studentInformationArray.isEmpty {
+                
+                var annotations = [MKPointAnnotation]()
+                
+                /* First remove all of the pre-existing annotations so they don't continually stack on top of one another */
+                dispatch_async(dispatch_get_main_queue(), {self.MapView.removeAnnotations(self.MapView.annotations)})
+                
+                for location in StudentInformationClient.sharedInstance().studentInformationArray {
+                    let annotation = ParseClient.sharedInstance().createAnnotationFromStudentInformation(location)
+                    annotations.append(annotation)
                 }
+                
+                dispatch_async(dispatch_get_main_queue(), {self.MapView.addAnnotations(annotations)})
+//            } else if let locations = locations {
+//                for location in locations {
+//                    self.annotation = ParseClient.sharedInstance().createAnnotationFromStudentInformation(location)
+//                    self.annotations.append(self.annotation)
+//                    print(self.annotation.title)
+//                    print(self.annotation.subtitle)
+//                    self.MapView.addAnnotations(self.annotations)
+//                    print("added to map")
+//                }
                 
             } else {
                 print("Error - no annotations downloaded from Parse")

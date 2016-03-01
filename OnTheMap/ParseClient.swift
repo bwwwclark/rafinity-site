@@ -100,7 +100,7 @@ class ParseClient: AnyObject {
     
     
     
-    func getStudentLocations(Limit: String, completionHandler: (locations: [StudentInformation]?, error: NSError?) -> Void) ->NSURLSessionDataTask? {
+    func getStudentLocations(Limit: String, completionHandler: (error: NSError?) -> Void) ->NSURLSessionDataTask? {
         
         /* Specify parameters */
         
@@ -115,10 +115,12 @@ class ParseClient: AnyObject {
             /* 3. Send the desired value(s) to completion handler */
             
             if let error = error {
-                completionHandler(locations: nil, error: error)
+                completionHandler(error: error)
             } else {
                 
                 if let results = JSONResult[ParseConstants.JSONResponseKeys.LocationResults] as? [[String : AnyObject]] {
+                    
+                    StudentInformationClient.sharedInstance().studentInformationArray.removeAll()
                     
                     /* Assign the needed parameters to the StudentInformation objects */
                     var locations = [StudentInformation]()
@@ -130,11 +132,12 @@ class ParseClient: AnyObject {
                         
                         /* Add the newly created location to the array of locations */
                         locations.append(location)
+                        StudentInformationClient.sharedInstance().studentInformationArray.append(location)
                     }
                     
-                    completionHandler(locations: locations, error: nil)
+                    completionHandler(error: nil)
                 } else {
-                    completionHandler(locations: nil, error: NSError(domain: "getStudentLocations parsing", code: 0, userInfo: [NSLocalizedDescriptionKey: "Could not parse getStudentLocations"]))
+                    completionHandler(error: NSError(domain: "getStudentLocations parsing", code: 0, userInfo: [NSLocalizedDescriptionKey: "Could not parse getStudentLocations"]))
                 }
             }
             
@@ -161,6 +164,8 @@ class ParseClient: AnyObject {
         
         return annotation
     }
+    
+    
     
     
     class func parseJSONWithCompletionHandler(data: NSData, completionHandler: (result: AnyObject!, error: NSError?) -> Void) {
@@ -206,10 +211,5 @@ class ParseClient: AnyObject {
         
         return (!urlVars.isEmpty ? "?" : "") + urlVars.joinWithSeparator("&")
     }
-    
-    
-
-
-
     
 }

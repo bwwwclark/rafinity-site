@@ -13,14 +13,13 @@ struct StudentInformation {
     //MARK: Properties
     
     var objectid: String? = nil
-    var uniqueKey: String? = nil
+    //var uniqueKey: String? = nil
     var firstName: String? = nil
     var lastName: String? = nil
     var mapString: String? = nil
     var mediaURL: String? = nil
     var latitude: Double? = nil
     var longitude: Double? = nil
-    var title: String? = "/(firstName) /(lastName)"
     
     
     //MARK: Initializer
