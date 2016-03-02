@@ -106,7 +106,12 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <items>
                                         <navigationItem title="On The Map" id="aPJ-tK-Aag">
-                                            <barButtonItem key="leftBarButtonItem" title="Logout" id="uW6-2H-zMO"/>
+                                            <barButtonItem key="leftBarButtonItem" title="Logout" id="uW6-2H-zMO">
+                                                <connections>
+                                                    <action selector="logout:" destination="f51-LQ-pKz" id="El7-hd-EDz"/>
+                                                    <segue destination="BYZ-38-t0r" kind="show" identifier="TableViewControllerLogout" id="HI8-qH-u3P"/>
+                                                </connections>
+                                            </barButtonItem>
                                             <barButtonItem key="rightBarButtonItem" systemItem="add" id="C3l-ax-72A"/>
                                         </navigationItem>
                                     </items>
@@ -154,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ECr-VD-zO6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2670" y="616"/>
+            <point key="canvasLocation" x="2672" y="656"/>
         </scene>
         <!--MapViewController-->
         <scene sceneID="DwQ-FH-qg2">
@@ -175,7 +180,12 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="On The Map" id="PFC-dM-ufb">
-                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="tsa-6V-XkD"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="tsa-6V-XkD">
+                                            <connections>
+                                                <action selector="logout:" destination="V1u-I3-4eU" id="E4w-Yx-meR"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="mapViewControllerLogout" id="4wx-Tx-C7s"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5ia-Uy-PpZ"/>
                                     </navigationItem>
                                 </items>
@@ -238,4 +248,7 @@
             <point key="canvasLocation" x="1856" y="288"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4wx-Tx-C7s"/>
+    </inferredMetricsTieBreakers>
 </document>

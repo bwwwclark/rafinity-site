@@ -44,15 +44,6 @@ class MapViewController: UIViewController, MKMapViewDelegate{
                 }
                 
                 dispatch_async(dispatch_get_main_queue(), {self.MapView.addAnnotations(annotations)})
-//            } else if let locations = locations {
-//                for location in locations {
-//                    self.annotation = ParseClient.sharedInstance().createAnnotationFromStudentInformation(location)
-//                    self.annotations.append(self.annotation)
-//                    print(self.annotation.title)
-//                    print(self.annotation.subtitle)
-//                    self.MapView.addAnnotations(self.annotations)
-//                    print("added to map")
-//                }
                 
             } else {
                 print("Error - no annotations downloaded from Parse")
@@ -97,23 +88,22 @@ class MapViewController: UIViewController, MKMapViewDelegate{
     }
     
     
-    
-    
-    
-    //
-    //    @IBAction func logout(sender: AnyObject) {
-    //
-    //        UdacityClient.sharedInstance().logoutWithUdacity(UdacityClient.sharedInstance().sessionID!) { success, error in
-    //
-    //            if let error = error {
-    //                print("Logout failed due to error: \(error)")
-    //            } else {
-    //
-    //                if success {
-    //                    // Segue back to login screen
-    //                    self.dismissViewControllerAnimated(true, completion: nil)
-    //                }
-    //            }
-    //        }
+    @IBAction func logout(sender: AnyObject) {
+        
+        UdacityClient.sharedInstance().logoutWithUdacity(UdacityClient.sharedInstance().sessionID!) { success, error in
+            
+            if let error = error {
+                print("Logout failed due to error: \(error)")
+            } else {
+                
+                if success {
+                    // Segue back to login screen
+                    self.performSegueWithIdentifier("MapViewControllerLogout", sender: self)
+                }
+            }
+        }
+        
+        
+    }
     
 }

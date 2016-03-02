@@ -52,10 +52,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
-//  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return 10
-//    }
+
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
@@ -81,8 +78,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         
         let app = UIApplication.sharedApplication()
-        if let URLtoOpen = tableView.cellForRowAtIndexPath(indexPath)?.detailTextLabel?.text {
-            let isValidURL = app.openURL(NSURL(string: URLtoOpen)!)
+        if let urlToOpen = tableView.cellForRowAtIndexPath(indexPath)?.detailTextLabel?.text {
+            let isValidURL = app.openURL(NSURL(string: urlToOpen)!)
             
             //Display an alertView if the URL can't be opened
             if !isValidURL {
@@ -92,15 +89,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
             
         }
-//        let student = information[indexPath.row]
-//        
-//        /* Open Safari at the media url of the selected student if valid */
-//        if (student.mediaURL != nil) {
-//            UIApplication.sharedApplication().openURL(NSURL(string: student.mediaURL!)!)
-//            
-//        } else {
-//          print("URL cannot be loaded")
-//        }
+
     }
 
     func getStudentsLocations() {
@@ -121,47 +110,26 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         })
         
 }
+    
+    @IBAction func logout(sender: AnyObject) {
+        
+        UdacityClient.sharedInstance().logoutWithUdacity(UdacityClient.sharedInstance().sessionID!) { success, error in
+            
+            if let error = error {
+                print("Logout failed due to error: \(error)")
+            } else {
+                
+                if success {
+                    // Segue back to login screen
+                    self.performSegueWithIdentifier("TableViewControllerLogout", sender: self)
+                }
+            }
+        }
+        
+        
 }
 
-        
-//                dispatch_async(dispatch_get_main_queue()) {
-//                    
-//                    if error.code == 0 {
-//                        
-//                        let title = "Network Error!"
-//                        let message = "Error connecting to Parse. Check your Internet connection!"
-//                        let actionTitle = "OK"
-//                        
-//                        ConfigUI.configureAndPresentAlertController(self, title: title, message: message, actionTitle: actionTitle)
-//                        
-//                    } else {
-//                        
-//                        let title = "Error!"
-//                        let message = "Error getting students information from Parse!"
-//                        let actionTitle = "OK"
-//                        
-//                        ConfigUI.configureAndPresentAlertController(self, title: title, message: message, actionTitle: actionTitle)
-//                    }
-//                }
-//            }
-//        }
-    
 
+}
 
-
-//    extension TableViewController: UITableViewDelegate, UITableViewDataSource {
-//        
-//        func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//            
-//            /* Get cell type */
-//            let cellReuseIdentifier = "otmTableViewCell"
-//            //let location = self.locations[indexPath.row]
-//            let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseIdentifier) as UITableViewCell!
-//            
-//            /* Set cell defaults */
-//            //cell.textLabel!.text =  location.title
-//            //cell.detailTextLabel?.text = //location.mediaURL
-//            
-//            return cell
-//        }
 
