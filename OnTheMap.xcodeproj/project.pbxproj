@@ -23,6 +23,7 @@
 		681EF93C1C71275600FB3553 /* Login View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681EF93B1C71275600FB3553 /* Login View Controller.swift */; };
 		681EF93E1C723E3B00FB3553 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681EF93D1C723E3B00FB3553 /* TableViewController.swift */; };
 		68863E901C7E8891007D549C /* StudentLocationsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68863E8F1C7E8891007D549C /* StudentLocationsClient.swift */; };
+		68863E921C87D034007D549C /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68863E911C87D034007D549C /* AddEntryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		681EF93B1C71275600FB3553 /* Login View Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Login View Controller.swift"; sourceTree = "<group>"; };
 		681EF93D1C723E3B00FB3553 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		68863E8F1C7E8891007D549C /* StudentLocationsClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentLocationsClient.swift; path = ../StudentLocationsClient.swift; sourceTree = "<group>"; };
+		68863E911C87D034007D549C /* AddEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddEntryViewController.swift; path = ../AddEntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				681EF93B1C71275600FB3553 /* Login View Controller.swift */,
 				681EF93D1C723E3B00FB3553 /* TableViewController.swift */,
 				681EF9391C70FD5000FB3553 /* Map View Controller.swift */,
+				68863E911C87D034007D549C /* AddEntryViewController.swift */,
 			);
 			name = "View Contollers";
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				681EF93A1C70FD5000FB3553 /* Map View Controller.swift in Sources */,
 				681EF9071C70F23900FB3553 /* OnTheMap.xcdatamodeld in Sources */,
 				681EF93C1C71275600FB3553 /* Login View Controller.swift in Sources */,
+				68863E921C87D034007D549C /* AddEntryViewController.swift in Sources */,
 				681EF8FF1C70F23900FB3553 /* AppDelegate.swift in Sources */,
 				68863E901C7E8891007D549C /* StudentLocationsClient.swift in Sources */,
 			);

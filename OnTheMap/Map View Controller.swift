@@ -7,8 +7,6 @@
 //
 
 import Foundation
-
-import Foundation
 import UIKit
 import MapKit
 
@@ -103,6 +101,11 @@ class MapViewController: UIViewController, MKMapViewDelegate{
             }
         }
         
+        
+    }
+    
+    @IBAction func addLocationButton(sender: AnyObject) {
+        self.performSegueWithIdentifier("mapPostLocationSegue", sender: self)
         
     }
     
