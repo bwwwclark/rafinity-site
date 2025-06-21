@@ -1,29 +1,37 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RAFinity - ICD-10 RAF Lookup Tool</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <img src="logo.png" alt="RAFinity Logo" class="logo" />
-    <h1>RAFinity</h1>
-    <p>The ICD-10 RAF Lookup Tool for Value-Based Care</p>
-  </header>
-  <main>
-   <a href="/app/index.html" class="button">Launch Web App</a>
-    <a href="privacy.html" class="link">Privacy Policy</a>
-    <a href="mailto:bwwwclark@gmail.com" class="link">Contact Support</a>
-    <p class="store-links">
-      Coming soon to:<br />
-      <span>🛒 Apple App Store • Google Play Store</span>
-    </p>
-  </main>
-  <footer>
-    <p>© 2025 RAFinity. All rights reserved.</p>
-  </footer>
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>RAFinity</title>
+    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
+    <style id="expo-reset">
+      /* These styles make the body full-height */
+      html,
+      body {
+        height: 100%;
+      }
+      /* These styles disable body scrolling if you are using <ScrollView> */
+      body {
+        overflow: hidden;
+      }
+      /* These styles make the root element full-height */
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+  <link rel="icon" href="/favicon.ico" /></head>
+
+  <body>
+    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <!-- The root element for your Expo app. -->
+    <div id="root"></div>
+  <script src="/_expo/static/js/web/entry-fe7c18f82906b62b7fb963e33428ad21.js" defer></script>
 </body>
 </html>
