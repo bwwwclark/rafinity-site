@@ -76,4 +76,95 @@
         }
 
         .footer-links {
-            mar
+            margin-bottom: 40px;
+        }
+
+        .footer-links a {
+            color: #007AFF;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 0 20px;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #0056CC;
+        }
+
+        .coming-soon {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .app-stores {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .cart-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .copyright {
+            color: #999;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 36px;
+            }
+            
+            .subtitle {
+                font-size: 16px;
+                padding: 0 10px;
+            }
+            
+            .launch-button {
+                padding: 14px 30px;
+                font-size: 16px;
+            }
+            
+            .footer-links a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo"></div>
+        
+        <h1>RAFinity</h1>
+        
+        <p class="subtitle">The ICD-10 RAF Lookup Tool for Value-Based Care</p>
+        
+        <a href="/app" class="launch-button">Launch Web App</a>
+        
+        <div class="footer-links">
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/support">Contact Support</a>
+        </div>
+        
+        <div class="coming-soon">Coming soon to:</div>
+        
+        <div class="app-stores">
+            <svg class="cart-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+            </svg>
+            Apple App Store • Google Play Store
+        </div>
+        
+        <div class="copyright">© 2025 RAFinity. All rights reserved.</div>
+    </div>
+</body>
+</html>
